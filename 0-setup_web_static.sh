@@ -22,6 +22,7 @@ check_file() {
 }
 #sudo mkdir -p "$data_folder" "$data_static" "$dara_releases" "$data_shared" "$data_test"
 sudo chown -R ubuntu:ubuntu "$data_folder"
+sudo find "$data_folder" -type f -exec chmod +x {} \;
 #sudo chmod -R 775 "$data_folder"
 check_file "$data_folder"
 check_file "$data_static"
