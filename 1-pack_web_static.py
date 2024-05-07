@@ -7,7 +7,7 @@ import os
 from datetime import datetime
 
 def do_pack():
-    """Write a Fabric script that generates a .tgz archive from the contents"""
+    """Write a Fabric script tht generates a .tgz archive from the contents"""
     web_folder = 'web_static'
 
     now = datetime.now()
