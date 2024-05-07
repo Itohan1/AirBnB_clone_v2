@@ -3,37 +3,30 @@
 
 nginx_path="/etc/nginx"
 data_folder="/data"
-data_static="$data_folder/web_static"
-data_releases="$data_static/releases"
-data_shared="$data_static/shared"
-data_test="$data_releases/test"
-fake_html="$data_test/index.html"
-data_current="$data_static/current"
+#data_static="$data_folder/web_static"
+#data_releases="$data_static/releases"
+#data_shared="$data_static/shared"
+#data_test="$data_releases/test"
+#fake_html="$data_test/index.html"
+#data_current="$data_static/current"
 
 if [ ! -e "$nginx_path" ]; then
         sudo apt-get update
         sudo apt-get install -y nginx
 fi
-check_file() {
-        local path="$1"
-        if [ ! -e "$path" ]; then
-                sudo mkdir -p "$path"
-        fi
-}
-#sudo mkdir -p "$data_folder" "$data_static" "$dara_releases" "$data_shared" "$data_test"
-check_file "$data_folder"
-check_file "$data_static"
-check_file "$data_releases"
-check_file "$data_shared"
-check_file "$data_test"
+#check_file() {
+        #local path="$1"
+        #if [ ! -e "$path" ]; then
+                #sudo mkdir -p "$path"
+        #fi
+#}
+sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
+#check_file "$data_folder"
+#check_file "$data_static"
+#check_file "$data_releases"
+#check_file "$data_shared"
+#check_file "$data_test"
 sudo chown -R ubuntu:ubuntu "$data_folder"
-sudo chmod -R 775 "$data_folder"
-sudo chown -R ubuntu:ubuntu "$data_static"
-sudo chmod -R 755 "$data_static"
-sudo chown -R ubuntu:ubuntu "$data_test"
-sudo chmod -R 777 "$data_test"
-#sudo chown -R ubuntu:ubuntu "$data_shared"
-#sudo chmod -R 755 "$data_shared"
 html_content='<html>
         <head>
         </head>
