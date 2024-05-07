@@ -8,6 +8,7 @@ env.key_filename = '<path to SSH key>'
 
 
 def do_deploy(archive_path):
+    """Write a Fabric script (based on the file 1-pack_web_static.py)"""
     if not os.path.exists(archive_path):
         return (False)
 
