@@ -1,9 +1,10 @@
 #!/usr/bin/python3
+"""Write a Fabric script that generates a .tgz archive from the contents"""
+
+
 from fabric import task
 import os
 from datetime import datetime
-"""Write a Fabric script that generates a .tgz archive from the contents"""
-
 
 def do_pack():
     """Write a Fabric script that generates a .tgz archive from the contents"""
