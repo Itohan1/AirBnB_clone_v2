@@ -6,6 +6,7 @@ if ! [ -x "$(command -v nginx)" ]; then
         sudo apt-get update
         sudo apt-get install -y nginx
 fi
+sudo service nginx restart
 sudo mkdir -p /data/web_static/releases/test /data/web_static/shared
 sudo chown -R ubuntu:ubuntu /data
 echo "<html><head></head><body> Holberton School</body></html>" | sudo tee /data/web_static/releases/test/index.html
