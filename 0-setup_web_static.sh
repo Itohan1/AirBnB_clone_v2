@@ -7,7 +7,7 @@ data_static="$data_folder/web_static"
 data_releases="$data_static/releases"
 #data_shared="$data_static/shared"
 data_test="$data_releases/test"
-#fake_html="$data_test/index.html"
+fake_html="$data_test/index.html"
 data_current="$data_static/current"
 
 if [ ! -e "$nginx_path" ]; then
@@ -34,7 +34,7 @@ html_content='<html>
                 Holberton School
         </body>
 </html>'
-echo "$html_content" | sudo tee "$fake_html" > /dev/null
+echo "$html_content" | sudo tee "$fake_html"
 #echo "Yes fake html" | sudo tee "$fake_html"
 #sudo mkdir -p "$data_test" "$data_shared"
 if [ -L "$data_current" ]; then
