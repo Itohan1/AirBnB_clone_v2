@@ -3,12 +3,12 @@
 
 nginx_path="/etc/nginx"
 data_folder="/data"
-#data_static="$data_folder/web_static"
-#data_releases="$data_static/releases"
+data_static="$data_folder/web_static"
+data_releases="$data_static/releases"
 #data_shared="$data_static/shared"
-#data_test="$data_releases/test"
+data_test="$data_releases/test"
 #fake_html="$data_test/index.html"
-#data_current="$data_static/current"
+data_current="$data_static/current"
 
 if [ ! -e "$nginx_path" ]; then
         sudo apt-get update
