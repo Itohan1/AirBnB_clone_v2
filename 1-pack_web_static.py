@@ -1,26 +1,21 @@
 #!/usr/bin/python3
-"""Write a Fabric script that generate contents"""
+"""Write a Fabric script that generates a
+tgz archive from the contents of the web_static
+folder of your AirBnB Clone repo, using the function do_pack
+"""
+from fabric.api import local
+from datetime import datetime
 
 
 def do_pack():
     """Write a Fabric script tht generate contents"""
 
-    web_folder = 'web_static'
+    local("mkdir -p versions")
+    timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
+    archive_name = "web_static_" + timestamp + ".tgz"
+    result_archive = local(f"tar -czvf versions/{archive_name} web_static")
 
-    now = datetime.now()
-    timestamp = now.strftime('%Y%m%d%H%M%S')
-
-    achive_name = f'web_static_{timestamp}.tgz'
-
-    versions_folder = 'versions'
-    os.makedirs(versions_folder, exists_ok=True)
-
-    result = c.local(f'tar - cvzf {versions_folder}/{archive_name} {
-            web_folder}')
-
-    if result.ok:
-        archive_path = os.path.join(versions_folder, archive_name)
-        return archive_path
-
+    if result.succeeded:
+        return (f"web_static/{archive_name}")
     else:
-        return None
+        return (None)
