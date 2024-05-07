@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Write a Bash script that sets up your web servers for the deployment
+# Write a Bash script thate sets up your web servers for the deployment
 
 if ! [ -x "$(command -v nginx)" ]; then
   sudo apt-get update
