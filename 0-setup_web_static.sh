@@ -26,14 +26,14 @@ check_file "$data_static"
 check_file "$data_releases"
 check_file "$data_shared"
 check_file "$data_test"
-sudo chown -R ubuntu:ubuntu "$data_folder"
-sudo chmod -R 775 "$data_folder"
-sudo chown -R ubuntu:ubuntu "$data_releases"
-sudo chmod -R 755 "$data_releases"
-sudo chown -R ubuntu:ubuntu "$data_test"
-sudo chmod -R 777 "$data_test"
-sudo chown -R ubuntu:ubuntu "$data_shared"
-sudo chmod -R 755 "$data_shared"
+sudo chown -R ubuntu:ubuntu /data/
+#sudo chmod -R 775 "$data_folder"
+#sudo chown -R ubuntu:ubuntu "$data_releases"
+#sudo chmod -R 755 "$data_releases"
+#sudo chown -R ubuntu:ubuntu "$data_test"
+#sudo chmod -R 777 "$data_test"
+#sudo chown -R ubuntu:ubuntu "$data_shared"
+#sudo chmod -R 755 "$data_shared"
 html_content='<html>
         <head>
         </head>
