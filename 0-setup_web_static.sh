@@ -2,7 +2,7 @@
 # Write a Bash script that sets up your web servers for the deployment
 
 nginx_path="/etc/nginx"
-if [ ! -e "$nginx_path" ]; then
+if ! [ -x "$(command -v nginx)" ]; then
         sudo apt-get update
         sudo apt-get install -y nginx
 fi
