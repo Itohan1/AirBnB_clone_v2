@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""Write a Fabric script that generates a .tgz archive from the contents"""
 from fabric import task
+"""Write a Fabric script that generates a .tgz archive from the contents"""
 
 
 def do_pack():
