@@ -1,9 +1,13 @@
 #!/usr/bin/python3
-"""Write a Fabric script that generates a .tgz archive from the contents"""
+"""Write a Fabric script that generate contents"""
 
 
+from fabric import task
+import os
+from datetime import datetime
+ 
 def do_pack():
-    """Write a Fabric script tht generates a .tgz archive from the contents"""
+    """Write a Fabric script tht generate contents"""
     web_folder = 'web_static'
 
     now = datetime.now()
