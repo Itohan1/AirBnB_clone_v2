@@ -40,7 +40,7 @@ html_content='<html>
                 Holberton School
         </body>
 </html>'
-echo "$html_content" | sudo tee "$fake_html"
+echo "$html_content" | sudo tee "$fake_html" > /dev/null
 #echo "Yes fake html" | sudo tee "$fake_html"
 #sudo mkdir -p "$data_test" "$data_shared"
 if [ -L "$data_current" ]; then
