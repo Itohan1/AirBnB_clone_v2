@@ -21,13 +21,15 @@ check_file() {
         fi
 }
 #sudo mkdir -p "$data_folder" "$data_static" "$dara_releases" "$data_shared" "$data_test"
+sudo chown -R ubuntu:ubuntu "$data_folder"
+sudo chmod -R 755 "$data_folder"
 sudo chown -R ubuntu:ubuntu "$data_releases"
 sudo chmod -R 755 "$data_releases"
 sudo chown -R ubuntu:ubuntu "$data_test"
 sudo chmod -R 777 "$data_test"
 sudo chown -R ubuntu:ubuntu "$data_shared"
 sudo chmod -R 755 "$data_shared"
-#sudo chmod -R 775 "$data_folder"
+
 check_file "$data_folder"
 check_file "$data_static"
 check_file "$data_releases"
