@@ -4,6 +4,7 @@
 
 def do_pack():
     """Write a Fabric script tht generate contents"""
+
     web_folder = 'web_static'
 
     now = datetime.now()
