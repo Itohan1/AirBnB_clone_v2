@@ -14,9 +14,9 @@ class FileStorage:
             return FileStorage.__objects
         else:
             clsobjs = {}
-            for k, v in FileStorage.__objects.items():
+            for k, v in FileStorage._objects.items():
                 if isinstance(v, cls):
-                    clsobjs[k] = v
+                    clsobj[k] = v
             return clsobjs
 
     def new(self, obj):
