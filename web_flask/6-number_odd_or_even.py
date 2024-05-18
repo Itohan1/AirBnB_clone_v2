@@ -48,7 +48,7 @@ def number_template(n):
 @app.template_filter('odd_or_even')
 def oddeven(n):
     """check if the number is odd or even"""
-    if n % 2:
+    if n % 2 == 0:
         return f"{n} is even"
     else:
         return f"{n} is odd"
